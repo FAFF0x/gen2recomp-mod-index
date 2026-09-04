@@ -143,17 +143,18 @@ async function inspectZip(candidate) {
   if (!response.ok) throw new Error(`download returned HTTP ${response.status}`);
   writeFileSync(zipPath, Buffer.from(await response.arrayBuffer()));
 
-  const names = execFileSync('unzip', ['-Z1', zipPath], { encoding: 'utf8' })
+  const unzipOptions = { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 };
+  const names = execFileSync('unzip', ['-Z1', zipPath], unzipOptions)
     .split(/\r?\n/)
     .filter(Boolean);
   const manifestPath = chooseEntry(names, 'manifest.json');
   if (!manifestPath) throw new Error('manifest.json not found in ZIP');
-  const manifestText = execFileSync('unzip', ['-p', zipPath, manifestPath], { encoding: 'utf8' });
+  const manifestText = execFileSync('unzip', ['-p', zipPath, manifestPath], unzipOptions);
   const manifest = JSON.parse(manifestText);
 
   const readmePath = chooseEntry(names, 'README.md');
   const readme = readmePath
-    ? execFileSync('unzip', ['-p', zipPath, readmePath], { encoding: 'utf8' })
+    ? execFileSync('unzip', ['-p', zipPath, readmePath], unzipOptions)
     : '';
   return { manifest, readme };
 }
