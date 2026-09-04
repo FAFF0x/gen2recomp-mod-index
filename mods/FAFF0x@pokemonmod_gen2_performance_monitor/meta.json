@@ -1,6 +1,6 @@
 {
   "id": "pokemonmod_gen2_performance_monitor",
-  "title": "Performance Monitor - Gen 2",
+  "title": "Performance Monitor Gen 2",
   "author": "FAFF0x",
   "summary": "Gen 2-only FPS, frame-time, renderer and per-mod performance profiler with sandbox-safe diagnostic export.",
   "version": "1.0.0",

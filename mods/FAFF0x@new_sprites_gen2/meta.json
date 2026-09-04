@@ -1,0 +1,17 @@
+{
+  "id": "new_sprites_gen2",
+  "title": "New Sprites Gen 2",
+  "author": "FAFF0x",
+  "summary": "Gen 2-only modern Pokemon sprite pack with animated true-color front sprites for all 251 species, modern back sprites where supplied by the source pack, and battle-safe rendering for Gold, Silver and…",
+  "version": "2.0.0",
+  "categories": [
+    "ART"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/new_sprites_gen2_v2.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": false
+}

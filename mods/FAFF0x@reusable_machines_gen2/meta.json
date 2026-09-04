@@ -1,6 +1,6 @@
 {
   "id": "reusable_machines_gen2",
-  "title": "Reusable Machines - Gen 2",
+  "title": "Reusable Machines Gen 2",
   "author": "FAFF0x",
   "summary": "Gen 2 port of Reusable Machines. TM01-TM50 are reusable, HM moves can be replaced in the normal four-move learning flow, and the native Gen 2 TM/HM pocket keeps displaying each machine's move name.",
   "version": "2.0.0",

@@ -1,6 +1,6 @@
 {
   "id": "pokemonmod_gen2_trade_evolution_fix",
-  "title": "Trade Evolution Fix - Gen 2",
+  "title": "Trade Evolution Fix Gen 2",
   "author": "FAFF0x",
   "summary": "Gen 2 only: adds solo level-up paths for all ten vanilla trade evolutions while preserving the original link-trade paths.",
   "version": "1.2.0",
