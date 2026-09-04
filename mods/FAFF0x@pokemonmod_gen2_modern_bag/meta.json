@@ -1,0 +1,20 @@
+{
+  "id": "pokemonmod_gen2_modern_bag",
+  "title": "Modern Bag - Gen 2 (Pokemon MOD)",
+  "author": "FAFF0x",
+  "summary": "Pokemon MOD Gen 2-only Modern Bag with Favorites, seven logical pockets, persistent pins, unlimited capacity, search, TM/HM filters and safe coexistence with equivalent Modern Bag variants.",
+  "version": "1.0.0",
+  "categories": [
+    "UI"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/modern_bag_gen2_v1.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}

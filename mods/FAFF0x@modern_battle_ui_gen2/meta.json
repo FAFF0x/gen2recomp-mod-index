@@ -1,0 +1,23 @@
+{
+  "id": "modern_battle_ui_gen2",
+  "title": "MODERN BATTLE UI - GEN 2",
+  "author": "FAFF0x",
+  "summary": "Modern high-resolution battle HUD, dialogue, level-up stats, move-learning/forget prompts, horizontal commands, detailed FIGHT menu, in-battle Party and Pack overlays for Gold/Silver/Crystal while pr…",
+  "version": "2.2.0",
+  "categories": [
+    "UI"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/modern_battle_ui_gen2_v2.2.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "conflicts": [
+    "modern_battle_ui"
+  ]
+}

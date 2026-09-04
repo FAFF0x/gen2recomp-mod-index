@@ -1,0 +1,20 @@
+{
+  "id": "new_icons_gen2",
+  "title": "NEW ICONS - Gen 2",
+  "author": "FAFF0x",
+  "summary": "Gen 2-only replacement for all 251 small Pokemon party/menu icons, re-cropped from the original high-resolution sheets for a larger, clearer 16x16 presentation.",
+  "version": "2.0.1",
+  "categories": [
+    "ART"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/new_icons_gen2_v2.0.1.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}

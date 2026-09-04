@@ -1,0 +1,20 @@
+{
+  "id": "pokemonmod_gen2_item_shortcut",
+  "title": "Item Shortcut - Gen 2 (Pokemon MOD)",
+  "author": "FAFF0x",
+  "summary": "Standalone Gen 2-only Item Shortcut build. Assign five PACK items, mark one FAST item, use shortcuts from the overworld, and remap controls without import conflicts with legacy variants.",
+  "version": "1.0.0",
+  "categories": [
+    "UI"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/item_shortcut_gen2_v1.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}

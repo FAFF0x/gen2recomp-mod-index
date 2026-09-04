@@ -1,0 +1,17 @@
+{
+  "id": "instant_hatch_gen2",
+  "title": "Instant Hatch Gen 2",
+  "author": "FAFF0x",
+  "summary": "Adds an INSTANT HATCH option to Egg party submenus in Gen 2. Selecting it immediately starts the game's normal hatch sequence for that Egg.",
+  "version": "1.0.0",
+  "categories": [
+    "QOL"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/instant_hatch_gen2_v1.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": true
+}

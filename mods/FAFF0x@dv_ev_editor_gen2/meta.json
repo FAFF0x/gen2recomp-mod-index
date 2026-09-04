@@ -1,0 +1,17 @@
+{
+  "id": "dv_ev_editor_gen2",
+  "title": "DV EV Editor Gen 2",
+  "author": "FAFF0x",
+  "summary": "Adds a DV/EV option to each Gen 2 party Pokemon submenu, with clearly separated Sp. Atk and Sp. Def final-stat readouts, editable DVs/Stat EXP, and START to maximize all values.",
+  "version": "2.0.1",
+  "categories": [
+    "QOL"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/dv_ev_editor_gen2_v2.0.1.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": true
+}

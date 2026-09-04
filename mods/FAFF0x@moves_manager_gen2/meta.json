@@ -1,0 +1,17 @@
+{
+  "id": "moves_manager_gen2",
+  "title": "Moves Manager - Gen 2",
+  "author": "FAFF0x",
+  "summary": "Gen 2-only Moves Manager for Gold, Silver and Crystal: move details, remembered moves, reordering and replacement from the party submenu.",
+  "version": "2.0.0",
+  "categories": [
+    "UI"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/moves_manager_gen2_v2.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": true
+}
