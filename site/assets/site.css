@@ -1,0 +1,497 @@
+/* Layout and form controls on top of css-pokemon-gameboy, which gives us the
+   fonts, .framed borders, .button arrows and .progress-bar. Everything here
+   sticks to that palette so the two read as one sheet. */
+
+:root {
+  --neutral: #f8f3f8;
+  --contrast: #181010;
+  --primary: #48a058;
+  --secondary: #f0b088;
+  --danger: #b3181c;
+  --dim: rgba(24, 16, 16, 0.6);
+  --gb-screen: #9bbc0f;
+}
+
+/* The layout rules below set `display` on elements that also toggle [hidden],
+   and a class beats the UA sheet. Say it once, here. */
+[hidden] {
+  display: none !important;
+}
+
+body {
+  padding: 2em 1.5em 4em;
+  background: var(--neutral);
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1em 0.75em 3em;
+    font-size: 0.85em;
+  }
+}
+
+.wrapper {
+  max-width: 1100px;
+}
+
+/* ---------------------------------------------------------------- header */
+
+.site-head {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.site-head h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1rem, 3.4vw, 1.6rem);
+  line-height: 1.5;
+}
+
+.site-head .tagline {
+  display: block;
+  margin-top: 0.75em;
+  color: var(--dim);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.75em 1em;
+  list-style: none;
+}
+
+.site-nav li {
+  margin: 0;
+}
+
+.site-nav .current button,
+.site-nav .current .button {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------------------- toolbar */
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75em;
+  align-items: end;
+}
+
+@media screen and (max-width: 768px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.75em;
+  padding: 0;
+  list-style: none;
+}
+
+.filters li {
+  margin: 0;
+}
+
+.chip {
+  font-family: inherit;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--contrast);
+  color: var(--contrast);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--contrast);
+  color: var(--neutral);
+}
+
+.chip::before {
+  content: none !important; /* the framework's hover arrow crowds a chip row */
+}
+
+/* ---------------------------------------------------------------- cards */
+
+.mod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.mod-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  text-align: left;
+  cursor: pointer;
+  margin: 0;
+}
+
+.mod-card:focus-visible {
+  outline: 3px solid var(--primary);
+}
+
+.mod-card .thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 3px solid var(--contrast);
+  background: var(--gb-screen);
+  image-rendering: pixelated;
+}
+
+.mod-card .thumb.placeholder {
+  display: grid;
+  place-items: center;
+  color: rgba(24, 16, 16, 0.45);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}
+
+.mod-card h3 {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.mod-card .byline,
+.mod-card .summary {
+  color: var(--dim);
+  font-size: 0.85em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin-top: auto;
+  padding-top: 0.5em;
+}
+
+.badge {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  padding: 0.2em 0.45em;
+  border: 2px solid var(--contrast);
+  white-space: nowrap;
+}
+
+.badge.accent {
+  background: var(--primary);
+  color: var(--neutral);
+  border-color: var(--primary);
+}
+
+.badge.warn {
+  background: var(--secondary);
+  border-color: var(--contrast);
+}
+
+.badge.danger {
+  background: var(--danger);
+  color: var(--neutral);
+  border-color: var(--danger);
+}
+
+/* ---------------------------------------------------------------- detail */
+
+dialog.detail {
+  border: none;
+  background: transparent;
+  padding: 0;
+  max-width: min(780px, 94vw);
+  width: 100%;
+}
+
+dialog.detail::backdrop {
+  background: rgba(24, 16, 16, 0.7);
+}
+
+dialog.detail .framed {
+  max-height: 86vh;
+  overflow-y: auto;
+  background: var(--neutral);
+}
+
+.detail-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.detail-body {
+  line-height: 1.8;
+  font-size: 0.9em;
+}
+
+.detail-body img {
+  max-width: 100%;
+}
+
+.detail-body pre {
+  overflow-x: auto;
+  padding: 0.75em;
+  border: 2px solid var(--contrast);
+  background: rgba(24, 16, 16, 0.05);
+}
+
+.detail-body code {
+  font-family: ui-monospace, 'SFMono-Regular', monospace;
+  font-size: 0.9em;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3em 1em;
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.kv dt {
+  color: var(--dim);
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.kv dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---------------------------------------------------------------- forms */
+
+.field {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.field > .label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.field .hint {
+  display: block;
+  margin-top: 0.4em;
+  color: var(--dim);
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+.field input[type='text'],
+.field input[type='url'],
+.field input[type='password'],
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+  color: var(--contrast);
+  background: #fff;
+  border: 3px solid var(--contrast);
+  padding: 0.5em;
+}
+
+.field textarea {
+  min-height: 12em;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.field .required {
+  font-size: 0.7em;
+  padding: 0.1em 0.4em;
+  border: 2px solid var(--contrast);
+}
+
+.field .optional {
+  font-size: 0.7em;
+  color: var(--dim);
+}
+
+.field[data-invalid='true'] input,
+.field[data-invalid='true'] select,
+.field[data-invalid='true'] textarea {
+  border-color: var(--danger);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.4em;
+}
+
+.checkgrid label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.checkgrid input {
+  accent-color: var(--primary);
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.dropzone {
+  display: grid;
+  place-items: center;
+  gap: 0.5em;
+  min-height: 10em;
+  padding: 1em;
+  text-align: center;
+  border: 3px dashed var(--contrast);
+  background: var(--gb-screen);
+  cursor: pointer;
+  color: var(--contrast);
+}
+
+.dropzone[data-over='true'] {
+  border-style: solid;
+  background: var(--primary);
+  color: var(--neutral);
+}
+
+.dropzone img {
+  max-width: 100%;
+  max-height: 16em;
+  image-rendering: pixelated;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em 2em;
+  align-items: center;
+  margin-top: 1em;
+}
+
+/* ---------------------------------------------------------------- misc */
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  align-items: start;
+}
+
+@media screen and (max-width: 1024px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Outlined-white-on-red is the framework's danger look; a list of validation
+   messages needs to be read, so this borrows the colour and drops the fill. */
+.problems {
+  border: 3px solid var(--danger);
+  background: rgba(179, 24, 28, 0.06);
+  padding: 0.75em 1em;
+  margin: 1em 0;
+}
+
+.problems ul {
+  margin: 0;
+}
+
+.log {
+  font-size: 0.85em;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.log li::before {
+  content: '> ';
+}
+
+.log li.err {
+  color: var(--danger);
+}
+
+.log li.ok {
+  color: var(--primary);
+}
+
+.empty {
+  text-align: center;
+  padding: 3em 1em;
+  color: var(--dim);
+}
+
+.spin::after {
+  content: '';
+  animation: dots 1.2s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin::after {
+    animation: none;
+    content: '...';
+  }
+}
