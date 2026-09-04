@@ -1,0 +1,17 @@
+{
+  "id": "example_mod",
+  "title": "Example Mod",
+  "author": "YourName",
+  "summary": "A template entry — copy this folder, rename it, and edit every field.",
+  "version": "1.0.0",
+  "categories": ["GAMEPLAY", "QOL"],
+  "tags": ["template"],
+  "repo": "https://github.com/yourname/example_mod",
+  "github": "yourname/example_mod",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.9",
+  "profile": "content",
+  "permissions": [],
+  "license": "MIT"
+}
