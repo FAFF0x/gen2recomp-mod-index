@@ -1,0 +1,20 @@
+{
+  "id": "area_dexnav_gen2",
+  "title": "Area DexNav Gen 2",
+  "author": "FAFF0x",
+  "summary": "Press SELECT in the Gen 2 overworld to encounter an uncaught Pokemon from the current area's real Gold/Silver/Crystal encounter table.",
+  "version": "1.0.0",
+  "categories": [
+    "QOL"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/area_dexnav_gen2_v1.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}

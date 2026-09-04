@@ -1,0 +1,20 @@
+{
+  "id": "pokemonmod_gen2_quest_system",
+  "title": "Quest System - Gen 2 (Pokemon MOD)",
+  "author": "FAFF0x",
+  "summary": "Gen 2-only quest journal with START-menu QUESTS, persistent tracking, crash-safe Gen 2 NPC indicators, and optional Gen2 Modern UI presentation.",
+  "version": "1.0.1",
+  "categories": [
+    "CONTENT"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/quest_system_gen2_v1.0.1.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": ">=0.1.38 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}

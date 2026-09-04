@@ -1,0 +1,29 @@
+{
+  "id": "voxel_performance_fix_gen2",
+  "title": "Voxel Performance Fix Gen 2",
+  "author": "FAFF0x",
+  "summary": "External Gen 2 performance patch for BATTLE ART VOXEL 2.0.9. Fixes Gen 2 visibility, BODY-first loading, foreground mesh budget overshoot, and simultaneous neighbour activation spikes without modifyi…",
+  "version": "1.5.0",
+  "categories": [
+    "TOOL"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/voxel_performance_fix_gen2_v1.5.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.20 <3.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "dependencies": [
+    {
+      "id": "BATTLE_ART_VOXEL_GEN2",
+      "games": [
+        "gen2"
+      ],
+      "range": ">=2.0.9 <2.1.0"
+    }
+  ]
+}

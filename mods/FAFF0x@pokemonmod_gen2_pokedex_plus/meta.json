@@ -1,0 +1,20 @@
+{
+  "id": "pokemonmod_gen2_pokedex_plus",
+  "title": "Pokédex Plus - Gen 2",
+  "author": "FAFF0x",
+  "summary": "Gen 2-only Pokédex Plus with reliable START/GO name search, caught scanning, six-stat data, habitats, evolutions, level moves, and Modern UI species icon/preview metadata.",
+  "version": "1.0.3",
+  "categories": [
+    "UI"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/pokedex_plus_gen2_v1.0.3.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}

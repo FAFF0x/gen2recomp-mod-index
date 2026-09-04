@@ -1,0 +1,20 @@
+{
+  "id": "reusable_machines_gen2",
+  "title": "Reusable Machines - Gen 2",
+  "author": "FAFF0x",
+  "summary": "Gen 2 port of Reusable Machines. TM01-TM50 are reusable, HM moves can be replaced in the normal four-move learning flow, and the native Gen 2 TM/HM pocket keeps displaying each machine's move name.",
+  "version": "2.0.0",
+  "categories": [
+    "QOL"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/reusable_machines_gen2_v2.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}
