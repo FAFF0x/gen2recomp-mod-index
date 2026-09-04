@@ -45,3 +45,4 @@ node --test scripts/test.mjs
 ```
 
 The index contains metadata only. Installable mod ZIPs remain in `FAFF0x/gen2recomp`.
+
