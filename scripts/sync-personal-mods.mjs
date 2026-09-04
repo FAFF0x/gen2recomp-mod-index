@@ -170,6 +170,7 @@ function updateMeta(existing, row) {
   const next = {
     ...existing,
     id: row.id,
+    title: sourceTitle(row.filenameId),
     version: row.version,
     downloadURL: row.downloadURL,
     automatic_version_check: false,
@@ -187,7 +188,7 @@ function updateMeta(existing, row) {
 
 function createMeta(row) {
   const manifest = row.manifest;
-  const title = cleanText(manifest.name) || titleCase(row.id);
+  const title = sourceTitle(row.filenameId);
   const summary = truncate(
     cleanText(manifest.description) || firstUsefulLine(row.readme) || `${title} for Gen2Recomp.`,
     200,
@@ -217,7 +218,7 @@ function createMeta(row) {
 function buildDescription(row) {
   const readme = String(row.readme || '').trim();
   if (readme) return `${readme}\n`;
-  const title = cleanText(row.manifest.name) || titleCase(row.id);
+  const title = sourceTitle(row.filenameId);
   const summary = cleanText(row.manifest.description) || `${title} for Gen2Recomp.`;
   return `# ${title}\n\n${summary}\n\nDownload and install the ZIP through Gen2Recomp's MODS screen.\n`;
 }
@@ -312,6 +313,27 @@ function cleanText(value) {
 function truncate(value, max) {
   const text = cleanText(value);
   return text.length <= max ? text : `${text.slice(0, max - 1).trimEnd()}…`;
+}
+
+function sourceTitle(filenameId) {
+  const acronyms = new Map([
+    ['ui', 'UI'],
+    ['tm', 'TM'],
+    ['hm', 'HM'],
+    ['dv', 'DV'],
+    ['ev', 'EV'],
+    ['exp', 'EXP'],
+    ['hp', 'HP'],
+    ['pp', 'PP'],
+    ['qol', 'QOL'],
+    ['gen2', 'Gen 2'],
+  ]);
+  return String(filenameId)
+    .split(/[_-]+/)
+    .filter(Boolean)
+    .map((part) => acronyms.get(part.toLowerCase())
+      || (part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()))
+    .join(' ');
 }
 
 function titleCase(id) {
