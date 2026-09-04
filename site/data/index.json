@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-04T16:58:11.396Z",
+  "count": 25,
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "BALANCE",
+    "ART",
+    "AUDIO",
+    "UI",
+    "QOL",
+    "TRANSLATION",
+    "TOTAL_CONVERSION",
+    "LIBRARY",
+    "TOOL",
+    "OTHER"
+  ],
+  "mods": [
+    {
+      "folder": "FAFF0x@advanced_box_system_gen2",
+      "id": "advanced_box_system_gen2",
+      "title": "Advanced Box System Gen 2",
+      "author": "FAFF0x",
+      "summary": "Advanced Bill's PC workflow for Pokemon Recomp Gen 2 with semantic Pokemon-browser metadata for Modern UI integration: instant 14-box switching, direct party/box swaps, release browsing, native Gen 2…",
+      "version": "1.0.1",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/advanced_box_system_gen2_v1.0.1.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": true,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@advanced_box_system_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@all_tm_shop_gen2",
+      "id": "all_tm_shop_gen2",
+      "title": "All TM Shop Gen 2",
+      "author": "FAFF0x",
+      "summary": "Adds a dedicated free TM01-TM50 + HM01-HM07 catalogue to every Gen 2 mart. Press SELECT on a machine to view full move details.",
+      "version": "1.1.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/all_tm_shop_gen2_v1.1.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@all_tm_shop_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@area_dexnav_gen2",
+      "id": "area_dexnav_gen2",
+      "title": "Area Dexnav Gen 2",
+      "author": "FAFF0x",
+      "summary": "Press SELECT in the Gen 2 overworld to encounter an uncaught Pokemon from the current area's real Gold/Silver/Crystal encounter table.",
+      "version": "1.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/area_dexnav_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@area_dexnav_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@dv_ev_editor_gen2",
+      "id": "dv_ev_editor_gen2",
+      "title": "DV EV Editor Gen 2",
+      "author": "FAFF0x",
+      "summary": "Adds a DV/EV option to each Gen 2 party Pokemon submenu, with clearly separated Sp. Atk and Sp. Def final-stat readouts, editable DVs/Stat EXP, and START to maximize all values.",
+      "version": "2.0.1",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/dv_ev_editor_gen2_v2.0.1.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": true,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@dv_ev_editor_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_exp_share_modes",
+      "id": "pokemonmod_gen2_exp_share_modes",
+      "title": "EXP Share Modes Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only EXP distribution modes with an isolated mod identity for coexistence in the mod manager.",
+      "version": "1.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/exp_share_modes_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_exp_share_modes/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_free_master_rare",
+      "id": "pokemonmod_gen2_free_master_rare",
+      "title": "Free Master Rare Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only build that adds free MASTER BALL and RARE CANDY to standard Poke Marts, with a unique mod identity and coexistence guards for equivalent mods.",
+      "version": "1.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/free_master_rare_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_free_master_rare/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@hm_anywhere_gen2",
+      "id": "hm_anywhere_gen2",
+      "title": "HM Anywhere Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2 port of HM Anywhere. Owning an HM is enough to use its field move without teaching it; the original Johto Badge and map restrictions still apply. Includes Start -> HM and optional contextual fi…",
+      "version": "2.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/hm_anywhere_gen2_v2.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@hm_anywhere_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@instant_hatch_gen2",
+      "id": "instant_hatch_gen2",
+      "title": "Instant Hatch Gen 2",
+      "author": "FAFF0x",
+      "summary": "Adds an INSTANT HATCH option to Egg party submenus in Gen 2. Selecting it immediately starts the game's normal hatch sequence for that Egg.",
+      "version": "1.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/instant_hatch_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": true,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@instant_hatch_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_item_shortcut",
+      "id": "pokemonmod_gen2_item_shortcut",
+      "title": "Item Shortcut Gen 2",
+      "author": "FAFF0x",
+      "summary": "Standalone Gen 2-only Item Shortcut build. Assign five PACK items, mark one FAST item, use shortcuts from the overworld, and remap controls without import conflicts with legacy variants.",
+      "version": "1.0.0",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/item_shortcut_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_item_shortcut/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_modern_bag",
+      "id": "pokemonmod_gen2_modern_bag",
+      "title": "Modern Bag Gen 2",
+      "author": "FAFF0x",
+      "summary": "Pokemon MOD Gen 2-only Modern Bag with Favorites, seven logical pockets, persistent pins, unlimited capacity, search, TM/HM filters and safe coexistence with equivalent Modern Bag variants.",
+      "version": "1.0.0",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/modern_bag_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_modern_bag/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@modern_battle_ui_gen2",
+      "id": "modern_battle_ui_gen2",
+      "title": "Modern Battle UI Gen 2",
+      "author": "FAFF0x",
+      "summary": "Modern high-resolution battle HUD, dialogue, level-up stats, move-learning/forget prompts, horizontal commands, detailed FIGHT menu, in-battle Party and Pack overlays for Gold/Silver/Crystal while pr…",
+      "version": "2.2.0",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/modern_battle_ui_gen2_v2.2.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "conflicts": [
+        "modern_battle_ui"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@modern_battle_ui_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@gen2_modern_ui",
+      "id": "gen2_modern_ui",
+      "title": "Modern UI Gen 2",
+      "author": "FAFF0x",
+      "summary": "Modern high-resolution UI overhaul for Pokemon Recomp Gen 2. v1.0.12 fixes Advanced Box System WITHDRAW/SWAP readiness so custom Gen 2 box browsers keep the rich icon and Pokemon preview UI instead o…",
+      "version": "1.0.12",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/modern_ui_gen2_v1.0.12.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "overhaul",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "experimental": false,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@gen2_modern_ui/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_move_learn_stats",
+      "id": "pokemonmod_gen2_move_learn_stats",
+      "title": "Move Learn Stats Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only move-learning comparison panel with isolated mod identity and duplicate-mod defer protection.",
+      "version": "1.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/move_learn_stats_gen2_v2.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_move_learn_stats/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@moves_manager_gen2",
+      "id": "moves_manager_gen2",
+      "title": "Moves Manager Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only Moves Manager for Gold, Silver and Crystal: move details, remembered moves, reordering and replacement from the party submenu.",
+      "version": "2.0.0",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/moves_manager_gen2_v2.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": true,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@moves_manager_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@new_icons_gen2",
+      "id": "new_icons_gen2",
+      "title": "New Icons Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only replacement for all 251 small Pokemon party/menu icons, re-cropped from the original high-resolution sheets for a larger, clearer 16x16 presentation.",
+      "version": "2.0.1",
+      "categories": [
+        "ART"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/new_icons_gen2_v2.0.1.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@new_icons_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@new_item_icons_gen2",
+      "id": "new_item_icons_gen2",
+      "title": "New Item Icons Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only full-color item icon pack for PACK, Battle PACK, Mart, Item PC and Modern UI. TM/HM artwork follows the taught move's type.",
+      "version": "2.0.0",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/new_item_icons_gen2_v2.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@new_item_icons_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@new_sprites_gen2",
+      "id": "new_sprites_gen2",
+      "title": "New Sprites Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only modern Pokemon sprite pack with animated true-color front sprites for all 251 species, modern back sprites where supplied by the source pack, and battle-safe rendering for Gold, Silver and…",
+      "version": "2.0.0",
+      "categories": [
+        "ART"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/new_sprites_gen2_v2.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@new_sprites_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_nickname_changer",
+      "id": "pokemonmod_gen2_nickname_changer",
+      "title": "Nickname Changer Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only nickname changer. Keeps RENAME available in the field Pokemon submenu, including Pokemon with many contextual field moves.",
+      "version": "1.1.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/nickname_changer_gen2_v1.1.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.1.75 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_nickname_changer/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_performance_monitor",
+      "id": "pokemonmod_gen2_performance_monitor",
+      "title": "Performance Monitor Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only FPS, frame-time, renderer and per-mod performance profiler with sandbox-safe diagnostic export.",
+      "version": "1.0.0",
+      "categories": [
+        "OTHER"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/performance_monitor_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.1.51 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_performance_monitor/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_pokedex_plus",
+      "id": "pokemonmod_gen2_pokedex_plus",
+      "title": "Pokedex Plus Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only Pokédex Plus with reliable START/GO name search, caught scanning, six-stat data, habitats, evolutions, level moves, and Modern UI species icon/preview metadata.",
+      "version": "1.0.3",
+      "categories": [
+        "UI"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/pokedex_plus_gen2_v1.0.3.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_pokedex_plus/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_quest_system",
+      "id": "pokemonmod_gen2_quest_system",
+      "title": "Quest System Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only quest journal with START-menu QUESTS, persistent tracking, crash-safe Gen 2 NPC indicators, and optional Gen2 Modern UI presentation.",
+      "version": "1.0.1",
+      "categories": [
+        "CONTENT"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/quest_system_gen2_v1.0.1.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.1.38 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_quest_system/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_repel_reuse_prompt",
+      "id": "pokemonmod_gen2_repel_reuse_prompt",
+      "title": "Repel Reuse Prompt Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2 only: asks whether to immediately use another Repel when the current Repel wears off.",
+      "version": "1.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/repel_reuse_prompt_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=1.0.0 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_repel_reuse_prompt/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@reusable_machines_gen2",
+      "id": "reusable_machines_gen2",
+      "title": "Reusable Machines Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2 port of Reusable Machines. TM01-TM50 are reusable, HM moves can be replaced in the normal four-move learning flow, and the native Gen 2 TM/HM pocket keeps displaying each machine's move name.",
+      "version": "2.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/reusable_machines_gen2_v2.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@reusable_machines_gen2/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_summon",
+      "id": "pokemonmod_gen2_summon",
+      "title": "Summon Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2-only SUMMON menu: enter a Pokedex number to begin a normal wild encounter with that Pokemon.",
+      "version": "1.0.0",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/summon_gen2_v1.0.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_summon/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokemonmod_gen2_trade_evolution_fix",
+      "id": "pokemonmod_gen2_trade_evolution_fix",
+      "title": "Trade Evolution Fix Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2 only: adds solo level-up paths for all ten vanilla trade evolutions while preserving the original link-trade paths.",
+      "version": "1.2.0",
+      "categories": [
+        "GAMEPLAY"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/trade_evolution_fix_gen2_v1.2.0.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "affects_link": true,
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokemonmod_gen2_trade_evolution_fix/description.md",
+      "latest": null,
+      "update_check": "off"
+    }
+  ]
+}
