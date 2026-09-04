@@ -57,6 +57,19 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/build-index.mjs --releases
 
+      - name: Commit generated index
+        run: |
+          changes=$(git status --porcelain -- site/data/index.json site/data/mod.schema.json)
+          if [ -z "$changes" ]; then
+            echo "No generated index changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add site/data/index.json site/data/mod.schema.json
+            git commit -m "Update generated mod index [skip ci]"
+            git push
+          fi
+
       - name: Summarize
         run: |
           {
