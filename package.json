@@ -1,0 +1,16 @@
+{
+  "name": "gen2recomp-mod-index",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Community mod index for the Gen 2 recomp engine",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "validate": "node scripts/validate.mjs --examples",
+    "links": "node scripts/check-links.mjs",
+    "build": "node scripts/build-index.mjs",
+    "build:releases": "node scripts/build-index.mjs --releases",
+    "serve": "node scripts/build-index.mjs && python3 -m http.server -d site 8080",
+    "test": "node --test scripts/test.mjs"
+  }
+}
