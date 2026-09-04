@@ -1,0 +1,97 @@
+name: Validate submissions
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Which entries changed
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="origin/${{ github.base_ref }}"
+            # no --depth here: a shallow fetch grafts main's tip parentless,
+            # so any PR from a fork that is behind main dies with "no merge
+            # base" (checkout already ran with fetch-depth: 0)
+            git fetch --no-tags origin "${{ github.base_ref }}"
+            files=$(git diff --name-only "$base"...HEAD)
+          else
+            files=$(git ls-files 'mods/*')
+          fi
+          # Keep only real entry directories — stray files directly under mods/
+          # (and folders deleted by the diff) are not entries.
+          folders=$(printf '%s\n' "$files" | grep '^mods/' | cut -d/ -f1,2 | sort -u \
+            | while read -r f; do [ -d "$f" ] && printf '%s\n' "$f"; done | tr '\n' ' ')
+          outside=$(printf '%s\n' "$files" | grep -v '^mods/' | grep -v '^$' || true)
+          echo "folders=$folders" >> "$GITHUB_OUTPUT"
+          {
+            echo "### Changed entries"
+            echo
+            if [ -z "$folders" ]; then echo "_none_"; else printf -- '- `%s`\n' $folders; fi
+            if [ -n "$outside" ]; then
+              echo
+              echo "### Also touches files outside \`mods/\` — review these by hand"
+              echo
+              printf -- '- `%s`\n' $outside
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: UTF-8 clean
+        run: |
+          if [ -n "${{ steps.changed.outputs.folders }}" ]; then
+            node scripts/clean-utf8.mjs ${{ steps.changed.outputs.folders }}
+          else
+            node scripts/clean-utf8.mjs
+          fi
+
+      - name: No duplicate entries
+        run: node scripts/check-duplicates.mjs
+
+      - name: Validate
+        run: |
+          set -o pipefail
+          if [ -n "${{ steps.changed.outputs.folders }}" ]; then
+            node scripts/validate.mjs ${{ steps.changed.outputs.folders }} | tee report.txt
+          else
+            node scripts/validate.mjs --examples | tee report.txt
+          fi
+        continue-on-error: true
+        id: check
+
+      - name: Report
+        run: |
+          {
+            echo
+            echo '### Validator'
+            echo
+            echo '```'
+            cat report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          [ "${{ steps.check.outcome }}" = "success" ]
+
+      - name: Check download links resolve
+        if: steps.check.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/check-links.mjs ${{ steps.changed.outputs.folders }}
+
+      - name: Index builds
+        run: node scripts/build-index.mjs
