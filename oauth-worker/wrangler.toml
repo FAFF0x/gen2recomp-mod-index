@@ -1,0 +1,12 @@
+name = "gen2recomp-mod-index-oauth"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+[vars]
+# From your GitHub OAuth App (Settings -> Developer settings -> OAuth Apps).
+GITHUB_CLIENT_ID = "REPLACE_ME"
+# The exact origin the submission page is served from.
+ALLOWED_ORIGIN = "https://REPLACE_ME.github.io"
+
+# GITHUB_CLIENT_SECRET is a secret, not a var:
+#   wrangler secret put GITHUB_CLIENT_SECRET
