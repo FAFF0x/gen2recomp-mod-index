@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>gen2recomp Mod Index — Submission Helper</title>
+    <meta
+      name="description"
+      content="Fill in the form, sign in with GitHub, and this page opens the pull request that adds your mod to the gen2recomp mod index."
+    />
+    <meta name="color-scheme" content="light" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%23f8f3f8'/%3E%3Crect x='2' y='2' width='12' height='5' fill='%23b3181c'/%3E%3Crect x='2' y='9' width='12' height='5' fill='%23181010'/%3E%3Crect x='2' y='7' width='12' height='2' fill='%23181010'/%3E%3Crect x='6' y='6' width='4' height='4' fill='%23f8f3f8'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="assets/css-pokemon-gameboy.css" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="site-head">
+        <h1>gen2recomp Mod Index Submission</h1>
+        <span class="tagline">Sign in with GitHub to publish a pull request.</span>
+      </header>
+
+      <nav class="framed neutral">
+        <ul class="site-nav">
+          <li><a class="button" id="nav-repo" href="#">Index repo</a></li>
+          <li><a class="button" id="nav-wiki" href="#">Modding wiki</a></li>
+          <li><a class="button" id="nav-json" href="data/index.json">index.json</a></li>
+        </ul>
+      </nav>
+
+      <!-- ------------------------------------------------------------ auth -->
+      <section class="framed neutral" id="auth-panel">
+        <h2>1 &middot; GitHub</h2>
+        <p class="message" id="auth-status"><span>Signed out.</span> A submission is a pull request, so it needs your account.</p>
+        <div class="actions" id="auth-actions">
+          <button id="oauth-btn" hidden>Sign in with GitHub</button>
+          <button id="token-toggle">Use an access token</button>
+          <button id="signout-btn" hidden>Sign out</button>
+        </div>
+        <div class="field" id="token-field" hidden>
+          <label class="label" for="token">Personal access token</label>
+          <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_… or ghp_…" />
+          <span class="hint">
+            A fine-grained token needs <strong>Contents: read&amp;write</strong> and <strong>Pull requests: read&amp;write</strong>
+            on your fork of this index, or use a classic token with <strong>public_repo</strong>. It is kept in this tab
+            only (sessionStorage), sent straight to api.github.com, and never stored or proxied by this page.
+          </span>
+          <div class="actions">
+            <button id="token-save">Save token</button>
+          </div>
+        </div>
+      </section>
+
+      <main class="split">
+        <!-- ------------------------------------------------------ description -->
+        <section class="framed neutral">
+          <h2>2 &middot; Description</h2>
+          <div class="actions" style="margin-bottom: 0.5em">
+            <button id="tab-edit" aria-pressed="true">Edit</button>
+            <button id="tab-preview" aria-pressed="false">Preview</button>
+          </div>
+          <div class="field" id="description-field">
+            <label class="visually-hidden" for="description">Description markdown</label>
+            <textarea
+              id="description"
+              placeholder="What the mod does, what it changes, how to install it, credits. Markdown."
+              style="min-height: 26em"
+            ></textarea>
+            <span class="hint">Becomes <code>description.md</code>. Required. Keep it under 64 KB.</span>
+          </div>
+          <div class="detail-body" id="preview" hidden></div>
+        </section>
+
+        <!-- --------------------------------------------------------- metadata -->
+        <section class="framed neutral">
+          <h2>3 &middot; Core metadata</h2>
+
+          <div class="field">
+            <span class="label">Thumbnail <span class="optional">optional</span></span>
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose a thumbnail image">
+              <img id="thumb-preview" alt="" hidden />
+              <span id="dropzone-text">Drag and drop a PNG or JPEG<br />or click to browse</span>
+            </div>
+            <input id="thumb-input" type="file" accept="image/png,image/jpeg" class="visually-hidden" />
+            <div class="actions">
+              <button id="thumb-clear" hidden>Remove image</button>
+            </div>
+            <span class="hint" id="thumb-hint">PNG or JPEG, 2 MB max. 16:9 reads best on a card — 1920×1080 or smaller.</span>
+          </div>
+
+          <div class="two-col">
+            <label class="field">
+              <span class="label">Title <span class="required">required</span></span>
+              <input id="title" type="text" data-required />
+              <span class="hint">Display name in the index.</span>
+            </label>
+            <label class="field">
+              <span class="label">Author <span class="required">required</span></span>
+              <input id="author" type="text" data-required />
+              <span class="hint">Creator or maintainer shown to players.</span>
+            </label>
+            <label class="field">
+              <span class="label">Mod id <span class="required">required</span></span>
+              <input id="id" type="text" data-required placeholder="my_mod" />
+              <span class="hint">Exactly the <code>id</code> in your <code>manifest.json</code>.</span>
+            </label>
+            <label class="field">
+              <span class="label">Version <span class="required">required</span></span>
+              <input id="version" type="text" data-required placeholder="1.0.0" />
+              <span class="hint">Semver of the release this entry describes.</span>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="label">Summary <span class="optional">optional</span></span>
+            <input id="summary" type="text" maxlength="200" />
+            <span class="hint">One line for the card. Falls back to the first line of your description.</span>
+          </label>
+
+          <div class="field">
+            <span class="label">Categories <span class="required">required</span></span>
+            <div class="checkgrid" id="categories"></div>
+            <span class="hint">Pick up to four.</span>
+          </div>
+
+          <label class="field">
+            <span class="label">Tags <span class="optional">optional</span></span>
+            <input id="tags" type="text" placeholder="hard mode, sprites, qol" />
+            <span class="hint">Comma separated, lowercase, up to eight.</span>
+          </label>
+
+          <label class="field">
+            <span class="label">Submission path override <span class="optional">optional</span></span>
+            <input id="folder" type="text" placeholder="Author@modid" />
+            <span class="hint">
+              Only when the folder must differ from the generated name.<br />
+              Resolved folder: <code id="folder-resolved">mods/Author@modid/</code>
+            </span>
+          </label>
+        </section>
+
+        <!-- ----------------------------------------------------- distribution -->
+        <section class="framed neutral">
+          <h2>4 &middot; Where it downloads from</h2>
+          <p class="message">
+            <span>Set github</span> and the launcher's <em>Update</em> and <em>Versions</em> buttons work: it reads that
+            repo's Releases and installs the newest <code>&lt;id&gt;-&lt;version&gt;.zip</code>. The index re-checks
+            nightly, so you do not open a PR per version bump.
+          </p>
+
+          <label class="field">
+            <span class="label">Source repo URL <span class="required">required</span></span>
+            <input id="repo" type="url" data-required placeholder="https://github.com/you/my_mod" />
+          </label>
+
+          <label class="field">
+            <span class="label">GitHub owner/repo <span class="optional">recommended</span></span>
+            <input id="github" type="text" placeholder="you/my_mod" />
+            <span class="hint">The manifest's <code>github</code> field. Enables auto-update and version history.</span>
+          </label>
+
+          <label class="field">
+            <span class="label">Direct download URL <span class="optional">optional</span></span>
+            <input id="downloadURL" type="url" placeholder="https://github.com/you/my_mod/releases/latest/download/my_mod-1.0.0.zip" />
+            <span class="hint">
+              Required if you have no <code>github</code>. Must resolve straight to a .zip with the mod's files at the
+              archive root — not a release page.
+            </span>
+          </label>
+
+          <div class="checkgrid">
+            <label><input id="automatic_version_check" type="checkbox" checked /> Track new releases automatically</label>
+            <label><input id="experimental" type="checkbox" /> Marked experimental</label>
+          </div>
+
+          <label class="field" style="margin-top: 1em">
+            <span class="label">Pin to release tag <span class="optional">optional</span></span>
+            <input id="fixed_release_tag" type="text" placeholder="v1.2.0" />
+            <span class="hint">Index stays on this tag instead of following the newest release.</span>
+          </label>
+        </section>
+
+        <!-- -------------------------------------------------------- engine fit -->
+        <section class="framed neutral">
+          <h2>5 &middot; Engine fit</h2>
+          <div class="two-col">
+            <label class="field">
+              <span class="label">Mod API</span>
+              <select id="api">
+                <option value="2" selected>2 (current)</option>
+                <option value="1">1</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="label">Profile</span>
+              <select id="profile">
+                <option value="content" selected>content</option>
+                <option value="overhaul">overhaul</option>
+                <option value="total_conversion">total_conversion</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="label">Engine version range <span class="optional">optional</span></span>
+              <input id="game_version" type="text" placeholder=">=0.9" />
+            </label>
+            <label class="field">
+              <span class="label">License <span class="optional">optional</span></span>
+              <input id="license" type="text" placeholder="MIT" />
+            </label>
+          </div>
+
+          <div class="field">
+            <span class="label">Permissions declared</span>
+            <div class="checkgrid">
+              <label><input type="checkbox" class="perm" value="network" /> network</label>
+              <label><input type="checkbox" class="perm" value="filesystem" /> filesystem</label>
+              <label><input type="checkbox" class="perm" value="engine_internals" /> engine_internals</label>
+            </div>
+            <span class="hint">Disclosure, not a sandbox — copy what your manifest declares.</span>
+          </div>
+
+          <div class="field">
+            <span class="label">Link play</span>
+            <div class="checkgrid">
+              <label><input id="affects_link" type="checkbox" /> Moves the link fingerprint</label>
+            </div>
+            <span class="hint">Leave unchecked for a pure <code>content</code> mod. Overhauls and conversions normally check it.</span>
+          </div>
+
+          <div class="two-col">
+            <label class="field">
+              <span class="label">Dependencies <span class="optional">optional</span></span>
+              <input id="dependencies" type="text" placeholder="some_lib, other@^1.2" />
+            </label>
+            <label class="field">
+              <span class="label">Conflicts <span class="optional">optional</span></span>
+              <input id="conflicts" type="text" placeholder="rival_mod" />
+            </label>
+          </div>
+        </section>
+
+        <!-- ----------------------------------------------------------- submit -->
+        <section class="framed neutral full">
+          <h2>6 &middot; Review and submit</h2>
+          <div class="field">
+            <span class="label">meta.json</span>
+            <pre id="meta-preview" style="max-height: 22em; overflow: auto"></pre>
+          </div>
+          <div class="problems" id="problems" hidden>
+            <ul class="log" id="problem-list"></ul>
+          </div>
+          <div class="actions">
+            <button id="submit-btn">Open pull request</button>
+            <button id="manual-btn">No token? Submit by hand</button>
+            <button id="copy-btn">Copy meta.json</button>
+          </div>
+          <ul class="log" id="log" aria-live="polite"></ul>
+        </section>
+      </main>
+
+      <footer class="framed neutral" style="margin-top: 2em">
+        <p class="message">
+          <span>Before you submit:</span> run <code>python3 tools/modkit.py validate my_mod --strict</code> and
+          <code>lint my_mod</code> in the engine repo. A distributed mod carries no ROM-derived content — see the
+          Publishing guide on the wiki.
+        </p>
+      </footer>
+    </div>
+
+    <dialog class="detail" id="manual-dialog">
+      <div class="framed neutral">
+        <div class="detail-head">
+          <h2>Submit by hand</h2>
+          <button id="manual-close" autofocus>Close</button>
+        </div>
+        <p>
+          These links open GitHub's new-file editor with the content already filled in. GitHub forks the index for you
+          and opens the pull request at the end. Thumbnails have to be uploaded on the same branch afterwards, or skip
+          them — they are optional.
+        </p>
+        <ul class="log" id="manual-links"></ul>
+      </div>
+    </dialog>
+
+    <script type="module" src="assets/submit.js"></script>
+  </body>
+</html>
