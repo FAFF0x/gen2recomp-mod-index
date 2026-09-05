@@ -181,8 +181,8 @@ function updateMeta(existing, row) {
   if ('profile' in manifest) syncOptional(next, 'profile', manifest.profile);
   if ('affects_link' in manifest) syncOptional(next, 'affects_link', manifest.affects_link);
   if ('permissions' in manifest) syncArray(next, 'permissions', manifest.permissions);
-  if ('dependencies' in manifest) syncArray(next, 'dependencies', manifest.dependencies);
-  if ('conflicts' in manifest) syncArray(next, 'conflicts', manifest.conflicts);
+  if ('dependencies' in manifest) syncRelationArray(next, 'dependencies', manifest.dependencies);
+  if ('conflicts' in manifest) syncRelationArray(next, 'conflicts', manifest.conflicts);
   if ('experimental' in manifest) syncOptional(next, 'experimental', manifest.experimental);
   return next;
 }
@@ -210,8 +210,8 @@ function createMeta(row) {
   syncOptional(meta, 'profile', manifest.profile || 'content');
   syncOptional(meta, 'affects_link', manifest.affects_link ?? false);
   syncArray(meta, 'permissions', manifest.permissions);
-  syncArray(meta, 'dependencies', manifest.dependencies);
-  syncArray(meta, 'conflicts', manifest.conflicts);
+  syncRelationArray(meta, 'dependencies', manifest.dependencies);
+  syncRelationArray(meta, 'conflicts', manifest.conflicts);
   syncOptional(meta, 'experimental', manifest.experimental);
   return meta;
 }
@@ -248,6 +248,29 @@ function syncOptional(target, key, value) {
 
 function syncArray(target, key, value) {
   if (Array.isArray(value) && value.length) target[key] = value;
+  else delete target[key];
+}
+
+function syncRelationArray(target, key, value) {
+  if (!Array.isArray(value) || value.length === 0) {
+    delete target[key];
+    return;
+  }
+
+  const normalized = value
+    .map((entry) => {
+      if (typeof entry === 'string') return entry.trim();
+      if (!entry || typeof entry !== 'object') return '';
+
+      const id = cleanText(entry.id);
+      if (!id) return '';
+
+      const range = cleanText(entry.range || entry.version || entry.version_range);
+      return range ? `${id}@${range}` : id;
+    })
+    .filter(Boolean);
+
+  if (normalized.length) target[key] = [...new Set(normalized)];
   else delete target[key];
 }
 
