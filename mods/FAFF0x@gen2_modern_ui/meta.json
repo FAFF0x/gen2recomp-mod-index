@@ -3,12 +3,12 @@
   "title": "Modern UI Gen 2",
   "author": "FAFF0x",
   "summary": "Modern high-resolution UI overhaul for Pokemon Recomp Gen 2. v1.0.12 fixes Advanced Box System WITHDRAW/SWAP readiness so custom Gen 2 box browsers keep the rich icon and Pokemon preview UI instead o…",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "categories": [
     "UI"
   ],
   "repo": "https://github.com/FAFF0x/gen2recomp",
-  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/modern_ui_gen2_v1.0.12.zip",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/modern_ui_gen2_v1.0.15.zip",
   "automatic_version_check": false,
   "api": 2,
   "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",

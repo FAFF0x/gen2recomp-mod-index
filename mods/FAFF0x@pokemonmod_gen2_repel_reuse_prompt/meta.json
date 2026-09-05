@@ -3,12 +3,12 @@
   "title": "Repel Reuse Prompt Gen 2",
   "author": "FAFF0x",
   "summary": "Gen 2 only: asks whether to immediately use another Repel when the current Repel wears off.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "categories": [
     "QOL"
   ],
   "repo": "https://github.com/FAFF0x/gen2recomp",
-  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/repel_reuse_prompt_gen2_v1.0.0.zip",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/repel_reuse_prompt_gen2_v1.0.1.zip",
   "automatic_version_check": false,
   "api": 2,
   "game_version": ">=1.0.0 <2.0.0",
