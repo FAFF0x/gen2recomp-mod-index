@@ -48,7 +48,18 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add mods .github/faff0x-source-state.json
           git commit -m "Sync FAFF0x mod ZIPs [skip ci]"
-          git push
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Push failed after 3 attempts."
+              exit 1
+            fi
+            echo "main advanced while building; rebasing and retrying..."
+            git fetch origin main
+            git rebase origin/main
+          done
 
       - name: Build index
         env:
@@ -65,7 +76,18 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add site/data/index.json site/data/mod.schema.json
             git commit -m "Update generated mod index [skip ci]"
-            git push
+            for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Push failed after 3 attempts."
+              exit 1
+            fi
+            echo "main advanced while building; rebasing and retrying..."
+            git fetch origin main
+            git rebase origin/main
+          done
           fi
 
       - name: Summarize
