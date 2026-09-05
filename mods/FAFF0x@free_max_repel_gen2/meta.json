@@ -1,0 +1,19 @@
+{
+  "id": "free_max_repel_gen2",
+  "title": "Free Max Repel Gen 2",
+  "author": "FAFF0x",
+  "summary": "Adds MAX REPEL to every standard Gen 2 Poke Mart and sets its price to 0.",
+  "version": "1.0.0",
+  "categories": [
+    "QOL"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/free_max_repel_gen2_v1.0.0.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}

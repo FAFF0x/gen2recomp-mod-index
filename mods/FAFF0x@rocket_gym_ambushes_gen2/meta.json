@@ -1,0 +1,19 @@
+{
+  "id": "rocket_gym_ambushes_gen2",
+  "title": "Rocket Gym Ambushes Gen 2",
+  "author": "FAFF0x",
+  "summary": "Eight Team Rocket ambushes after Johto Gym victories. Defeat each Rocket and recruit one Pokemon from their team, with Quest System Gen 2 journal integration.",
+  "version": "1.0.2",
+  "categories": [
+    "CONTENT"
+  ],
+  "repo": "https://github.com/FAFF0x/gen2recomp",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/rocket_gym_ambushes_gen2_v1.0.2.zip",
+  "automatic_version_check": false,
+  "api": 2,
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ]
+}
