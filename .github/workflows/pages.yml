@@ -1,4 +1,4 @@
-name: Build index and deploy Pages
+name: Build and publish mod index
 
 on:
   push:
@@ -11,11 +11,9 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: mod-index
   cancel-in-progress: false
 
 jobs:
@@ -80,17 +78,3 @@ jobs:
               for (const m of i.mods) console.log('- \`' + m.folder + '\` ' + (m.latest ? m.latest.version + ' (' + m.update_check + ')' : m.version + ' (' + m.update_check + ')'));"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
