@@ -3,12 +3,12 @@
   "title": "Advanced Box System Gen 2",
   "author": "FAFF0x",
   "summary": "Advanced Bill's PC workflow for Pokemon Recomp Gen 2 with semantic Pokemon-browser metadata for Modern UI integration: instant 14-box switching, direct party/box swaps, release browsing, native Gen 2…",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "categories": [
     "UI"
   ],
   "repo": "https://github.com/FAFF0x/gen2recomp",
-  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/advanced_box_system_gen2_v1.0.1.zip",
+  "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/advanced_box_system_gen2_v1.0.3.zip",
   "automatic_version_check": false,
   "api": 2,
   "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
