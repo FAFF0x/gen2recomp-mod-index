@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-06T09:29:37.320Z",
+  "generated_at": "2026-09-06T13:42:39.433Z",
   "count": 29,
   "categories": [
     "GAMEPLAY",
@@ -191,12 +191,12 @@
       "title": "HM Anywhere Gen 2",
       "author": "FAFF0x",
       "summary": "Gen 2 port of HM Anywhere. Owning an HM is enough to use its field move without teaching it; the original Johto Badge and map restrictions still apply. Includes Start -> HM and optional contextual fi…",
-      "version": "2.0.2",
+      "version": "2.1.0",
       "categories": [
         "QOL"
       ],
       "repo": "https://github.com/FAFF0x/gen2recomp",
-      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/hm_anywhere_gen2_v2.0.2.zip",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/hm_anywhere_gen2_v2.1.0.zip",
       "automatic_version_check": false,
       "api": 2,
       "game_version": "0.0.0-dev || >=0.2.48 <2.0.0",
