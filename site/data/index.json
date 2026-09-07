@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-07T04:50:22.816Z",
-  "count": 29,
+  "generated_at": "2026-09-07T10:26:17.494Z",
+  "count": 31,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -133,6 +133,31 @@
       ],
       "thumbnail": null,
       "description_url": "data/mods/FAFF0x@pokemonmod_gen2_exp_share_modes/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@free_evolution_shop_gen2",
+      "id": "free_evolution_shop_gen2",
+      "title": "Free Evolution Shop Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2 only. Adds a dedicated free EVOLUTION SHOP to Poke Marts. Designed to coexist with All TM Shop Gen 2 and Modern UI Gen 2.",
+      "version": "1.0.3",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/free_evolution_shop_gen2_v1.0.3.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@free_evolution_shop_gen2/description.md",
       "latest": null,
       "update_check": "off"
     },
@@ -502,6 +527,31 @@
       ],
       "thumbnail": null,
       "description_url": "data/mods/FAFF0x@pokemonmod_gen2_performance_monitor/description.md",
+      "latest": null,
+      "update_check": "off"
+    },
+    {
+      "folder": "FAFF0x@pokecenter_max_happiness_gen2",
+      "id": "pokecenter_max_happiness_gen2",
+      "title": "Pokecenter Max Happiness Gen 2",
+      "author": "FAFF0x",
+      "summary": "Gen 2 only. Healing at a Pokemon Center automatically sets every non-Egg party Pokemon to maximum happiness (255).",
+      "version": "1.0.2",
+      "categories": [
+        "QOL"
+      ],
+      "repo": "https://github.com/FAFF0x/gen2recomp",
+      "downloadURL": "https://raw.githubusercontent.com/FAFF0x/gen2recomp/main/pokecenter_max_happiness_gen2_v1.0.2.zip",
+      "automatic_version_check": false,
+      "api": 2,
+      "game_version": ">=0.2.48 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "thumbnail": null,
+      "description_url": "data/mods/FAFF0x@pokecenter_max_happiness_gen2/description.md",
       "latest": null,
       "update_check": "off"
     },
